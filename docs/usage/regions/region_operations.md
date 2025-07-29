@@ -48,6 +48,10 @@ The stack command repeats your selection, in a certain direction (`;stack <times
 
 Suppose you think a build would look better if it were nudged a little to the right. Rather than cutting and pasting the build, you also have the option of using the move command to adjust the its position (`;move <amount: int> [direction: Direction]`).
 
+## Revolving
+
+The revolve command makes copies of your selection like the stack command, except instead of copying them in a single direction, it rotates the selection around you (`;revolve <count: int> [start: int] [end: int] [heightDiff: int]`). With this, you can make spirals of any design. `start` and `end` are angles you'll make the spiral in. `heightDiff` will affect the height of the spiral.
+
 ## Rotating
 
 The rotate command allows you to rotate your builds around you (`;rotate [-ows] <rotate: int>`). By default, it affects the clipboard, but adding the `-w` flag will make it affect your selection instead. `-o` makes it rotate around its center, and `-s` changes your selection to fit the rotated build (only works with the `-w` flag).
@@ -56,9 +60,21 @@ The rotate command allows you to rotate your builds around you (`;rotate [-ows] 
 
 The flip command flips your builds in a direction of your choice around you (`;flip [-ows] [direction: Direction]`). The flags here do the same things as the ones for `;rotate`.
 
+## Scaling
+
+The scale command increases the size of the region in your selection (`;scale [-ows] (<scale>|<scaleXZ> <scaleY>|<scaleX> <scaleY> <scaleZ>)`). Note that it doesn't take into account the shape of blocks.
+
 ## Lines, Walls, and Faces
 
 The `;line`, `;walls` and `;faces` commands are all simple commands that only need a pattern to work, but are also affected by the global mask. They all do what they say. `;line` makes a line from the first to the second position, `;walls` makes walls around the selection, and `;faces` surrounds the selection with an outline (like `;walls`, but with a floor and ceiling).
+
+## Curves
+
+The `;curve` command acts like the `;line` command. Except you can define as many points as you want to make a path of blocks going through all of them. This command is special because you need to be in convex selection mode, via `;sel convex`, to set these points. The first selection point for the first point, and the second selection point for every point after that.
+
+## Paths
+
+The `;path` command is similar to the `;curve` command, but instead of just placing blocks, it copies a structure along the curve! The space between each copy can also be adjusted. For example, `;path 10` pastes down a structure every 10 blocks along the curve.
 
 ## Hollowing
 

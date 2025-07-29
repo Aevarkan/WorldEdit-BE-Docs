@@ -67,6 +67,14 @@ The overlay brush replaces blocks exposed to the sky with a pattern of choice, l
 
 The structure brush will paste a structure down wherever the brush is used. Do this to sprinkle features on landscapes for example. You can either use your clipboard, which offers the mask for flexibility, or exported structures which you can define multiple of to be picked randomly every brush use.
 
+### Blob Brush
+
+```
+;brush blob <pattern> [radius] [growPercent] [smoothness]
+```
+
+The blob brush creates a mess of blocks wherever it's used. A higher growth percent (number between 0 and 1) will lead to a larger blob within the specified radius.
+
 ## Brush Settings
 
 A few things about a brush can be adjusted to better fit your situation.

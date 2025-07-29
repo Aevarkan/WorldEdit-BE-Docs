@@ -91,3 +91,7 @@ This mask matches any block that's directly adjacent to air blocks, i.e. exposed
 ### Shadow Mask
 
 This mask matches blocks that can't be seen from where you are. It's best used in combination with `#surface`. For example, `;replace "#shadow #surface" stone` on some grass under trees while you're above them will turn them into stone. Inverting it like `!#shadow` will only match with blocks that can be seen from where you are.
+
+### Slope Mask
+
+This mask matches with blocks that are part of sloped terrain. The angle range varies from 0 degrees to 90. For example, `;replace "grass_block #slope[10:45]" coarse_dirt` will only target grass on 10 to 45 degree slopes, and convert it to coarse dirt. Best use it where there are no decoration blocks that can interfere with slope calculations. Like tall grass and flowers.

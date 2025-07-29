@@ -9,8 +9,6 @@ The following commands are planned to be implemented.
 -   //sel
     -   poly
     -   ellipsoid
-    -   convex
--   //curve
 -   //overlay
 -   //naturalize
 -   //deform

@@ -24,6 +24,14 @@ The stacker wand is a simple yet powerful tool. It acts like the `;stack` comnan
     `;tool stacker 10 air` would create a stacker wand that will copy blocks up to 10 times, or until it meets a block that's not air.
     If you were building underwater, you'd replace the mask with `water`.
 
+## Extruder Wand
+
+The extruder wand takes a region of blocks and pulls them out from wherever they were. Whether it's terrain or a structure.
+
+!!! Example
+
+    `;tool extruder 10` would create a extruder wand that will copy blocks in a 10 block radius towards the player. If you add the `-d` flag, it will push it in instead.
+
 ## Far wand
 
 The far wand is a long range version of the Selection wand. You mark selection points with it like usual, but you can do it from a distance. Created by typing `;tool farwand`.
