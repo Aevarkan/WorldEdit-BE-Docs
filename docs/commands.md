@@ -387,7 +387,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Generate a hollow sphere|
 	|:--|:--|
 	|**Permission**|`worldedit.generation.sphere`|
-	|**Usage**|`;hsphere <pattern> [-rd <dome>] <pattern> (<radii>|<radiiXZ> <radiiY>|<radiiX> <radiiY> <radiiZ>)`|
+	|**Usage**|`;hsphere <pattern> [-rd <dome>] (<radii>|<radiiXZ> <radiiY>|<radiiX> <radiiY> <radiiZ>)`|
 
 !!! note ""
 	
@@ -396,7 +396,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Generate a sphere|
 	|:--|:--|
 	|**Permission**|`worldedit.generation.sphere`|
-	|**Usage**|`;sphere <pattern> [-hrd <dome>] <pattern> (<radii>|<radiiXZ> <radiiY>|<radiiX> <radiiY> <radiiZ>)`|
+	|**Usage**|`;sphere <pattern> [-hrd <dome>] (<radii>|<radiiXZ> <radiiY>|<radiiX> <radiiY> <radiiZ>)`|
 
 !!! note ""
 	
@@ -405,7 +405,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Generate a cylinder|
 	|:--|:--|
 	|**Permission**|`worldedit.generation.cylinder`|
-	|**Usage**|`;cyl <pattern> [-hrd <direction>] <pattern> (<radii> [height]|<radiiX> <radiiZ> [height])`|
+	|**Usage**|`;cyl <pattern> [-hrd <direction>] (<radii> [height]|<radiiX> <radiiZ> [height])`|
 
 !!! note ""
 	
@@ -414,7 +414,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Generate a hollow cylinder|
 	|:--|:--|
 	|**Permission**|`worldedit.generation.cylinder`|
-	|**Usage**|`;hcyl <pattern> [-rd <direction>] <pattern> (<radii> [height]|<radiiX> <radiiZ> [height])`|
+	|**Usage**|`;hcyl <pattern> [-rd <direction>] (<radii> [height]|<radiiX> <radiiZ> [height])`|
 
 !!! note ""
 	
