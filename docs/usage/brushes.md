@@ -1,6 +1,6 @@
 # Brushes
 
-Brush tools are a more specific set of tools. They're meant to sculpt, shape and paint the world. You can bind a brush to almost any vanilla item, as long as you are holding it. For example, `;brush sphere log 5` Binds a sphere brush to the item you're holding.
+Brush tools are a more specific set of tools. They're meant to sculpt, shape and paint the world. You can bind a brush to almost any vanilla item, as long as you are holding it. For example, `;brush sphere log 5` Binds a sphere brush to the item you're holding. If you bind to an item with existing use, like a fishing rod, holding down the brush will allow you to brush in strokes.
 
 You can unbind a brush from an item with `;brush none`.
 
@@ -44,11 +44,34 @@ The smooth brush smoothes down terrain on use. `iterations` will specify how muc
 
 Use the erosion brush to shape terrain with great control. It comes in various modes.
 
--   The default mode pushes terrain in.
--   `lift` mode pushes terrain out.
--   `fill` mode filles in areas of the terrain.
--   `melt` mode does the opposite of `fill`.
--   `smooth` mode smoothes the terrain.
+- The default mode pushes terrain in.
+- `lift` mode pushes terrain out.
+- `fill` mode filles in areas of the terrain.
+- `melt` mode does the opposite of `fill`.
+- `smooth` mode smoothes the terrain.
+
+### Raise Brush
+
+```txt
+;brush raise [radius] [height] [falloff <amount> [type]] [-m <mask>]
+;brush raise [radius] [height] [-m <mask>]
+```
+
+The raise brush raises (or lowers) terrain by adjusting the height map in the affected area. Every use shifts the terrain surface up by `height` blocks (use a negative value to lower terrain). The optional `falloff` sub-command lets you control how quickly the effect fades from the center outward. There are different types of easing you can use, such as `linear` (default) and `ease_in_circ`. You can find more types from [easings.net](https://easings.net).
+
+!!! Examples
+
+    `;brush raise 5 2`
+
+    Raises terrain by 2 blocks in a radius-5 area with no falloff.
+
+    `;brush raise 5 3 falloff 0.8 ease_in_out_quad`
+
+    Raises terrain by 3 blocks with a strong smooth falloff toward the edges.
+
+    `;brush raise 4 -1`
+
+    Lowers terrain by 1 block in a radius-4 area.
 
 ### Overlay brush
 

@@ -20,4 +20,4 @@ Imported structures cannot be manipulated as much as clipboards can. They always
 
 ## Transferring structures to other worlds
 
-As they are, the structures defined when exporting can only be used in the world it was exported in. To use it in other worlds, the original world will need to be processed with the [WorldEdit app](worldedit_app.md).
+As they are, the structures defined when exporting can only be used in the world it was exported in. To use it in other worlds, the original world will need to be processed with an [external application](worldedit_app.md).

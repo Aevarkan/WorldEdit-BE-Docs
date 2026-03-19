@@ -36,7 +36,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|WorldEdit commands|
 	|:--|:--|
 	|**Permission**||
-	|**Usage**|`;worldedit <version|perf>`|
+	|**Usage**|`;worldedit <version|perf|app>`|
 
 !!! note ""
 	
@@ -55,6 +55,15 @@ Each command has their own permission requirements to be useable by a player. To
 	|:--|:--|
 	|**Permission**||
 	|**Usage**|`;worldedit perf`|
+
+!!! note ""
+	
+	**;worldedit app**
+
+	|**Description**|Get the link to the external app.|
+	|:--|:--|
+	|**Permission**||
+	|**Usage**|`;worldedit app`|
 
 !!! note ""
 	
@@ -342,16 +351,25 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Create a loft from a series of selected points|
 	|:--|:--|
 	|**Permission**|`worldedit.generation.shape`|
-	|**Usage**|`;loft <start|set|remove|clear>`|
+	|**Usage**|`;loft <start_curve|add_point|set|remove|clear>`|
 
 !!! note ""
 	
-	**;loft start**
+	**;loft start_curve**
 
-	|**Description**|Enter loft mode and create frames using selection commands and wands|
+	|**Description**|Create a new curve frame to shape the loft with.|
 	|:--|:--|
 	|**Permission**||
-	|**Usage**|`;loft start`|
+	|**Usage**|`;loft start_curve [coordinates]`|
+
+!!! note ""
+	
+	**;loft add_point**
+
+	|**Description**|Add a point to the loft's last curve frame|
+	|:--|:--|
+	|**Permission**||
+	|**Usage**|`;loft add_point [coordinates]`|
 
 !!! note ""
 	
@@ -375,7 +393,7 @@ Each command has their own permission requirements to be useable by a player. To
 	
 	**;loft clear**
 
-	|**Description**|Clear the loft and revert back to normal selection command/wand behaviour|
+	|**Description**|Clear the loft's frames|
 	|:--|:--|
 	|**Permission**||
 	|**Usage**|`;loft clear`|
@@ -499,6 +517,15 @@ Each command has their own permission requirements to be useable by a player. To
 
 !!! note ""
 	
+	**;terrain**
+
+	|**Description**|Generate terrain with noise|
+	|:--|:--|
+	|**Permission**|`worldedit.generation.terrain`|
+	|**Usage**|`;terrain <pattern> [amplitude] [frequency] [octaves] [-s <seed>] [-a]`|
+
+!!! note ""
+	
 	**;gmask**
 
 	|**Description**|Set the global mask|
@@ -535,6 +562,15 @@ Each command has their own permission requirements to be useable by a player. To
 
 !!! note ""
 	
+	**;overlay**
+
+	|**Description**|Overlay blocks on surfaces within the selection|
+	|:--|:--|
+	|**Permission**|`worldedit.region.overlay`|
+	|**Usage**|`;overlay <pattern> [depth] [surfaceMask]`|
+
+!!! note ""
+	
 	**;stack**
 
 	|**Description**|Repeat the contents of the current selection|
@@ -549,7 +585,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Make copies of the selection revolving around the player|
 	|:--|:--|
 	|**Permission**|`worldedit.region.revolve`|
-	|**Usage**|`;revolve [-as] <count> [start] [end] [heightDiff] [-d <direction>] [-m <mask>]`|
+	|**Usage**|`;revolve [-asr] <count> [start] [end] [heightDiff] [-d <direction>] [-m <mask>]`|
 
 !!! note ""
 	
@@ -585,7 +621,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Generate a wall from your selection|
 	|:--|:--|
 	|**Permission**|`worldedit.region.walls`|
-	|**Usage**|`;walls <pattern>`|
+	|**Usage**|`;walls <pattern> [mask]`|
 
 !!! note ""
 	
@@ -603,7 +639,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Generate an outline from your selection|
 	|:--|:--|
 	|**Permission**|`worldedit.region.faces`|
-	|**Usage**|`;faces <pattern>`|
+	|**Usage**|`;faces <pattern> [mask]`|
 
 !!! note ""
 	
@@ -639,7 +675,16 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Create a path with your clipboard|
 	|:--|:--|
 	|**Permission**|`worldedit.region.path`|
-	|**Usage**|`;path [spacing]`|
+	|**Usage**|`;path <rotated>`|
+
+!!! note ""
+	
+	**;path rotated**
+
+	|**Description**|Create a path with your clipboard rotated along the path|
+	|:--|:--|
+	|**Permission**||
+	|**Usage**|`;path [spacing] rotated <offset>`|
 
 !!! note ""
 	
@@ -999,7 +1044,7 @@ Each command has their own permission requirements to be useable by a player. To
 	|**Description**|Set the type of a brush being held|
 	|:--|:--|
 	|**Permission**||
-	|**Usage**|`;brush <none|sphere|cyl|smooth|struct|erode|overlay|blob>`|
+	|**Usage**|`;brush <none|sphere|cyl|smooth|raise|struct|erode|overlay|blob>`|
 
 !!! note ""
 	
@@ -1039,6 +1084,15 @@ Each command has their own permission requirements to be useable by a player. To
 
 !!! note ""
 	
+	**;brush raise**
+
+	|**Description**|Creates a terrain raising brush|
+	|:--|:--|
+	|**Permission**|`worldedit.brush.raise`|
+	|**Usage**|`;brush raise <falloff>`|
+
+!!! note ""
+	
 	**;brush struct**
 
 	|**Description**|Creates a brush that places structures|
@@ -1052,7 +1106,7 @@ Each command has their own permission requirements to be useable by a player. To
 
 	|**Description**|Creates a terrain shaping brush|
 	|:--|:--|
-	|**Permission**|`worldedit.brush.erode`|
+	|**Permission**|`worldedit.brush.erosion`|
 	|**Usage**|`;brush erode <lift|fill|melt|smooth>`|
 
 !!! note ""

@@ -44,4 +44,5 @@ nav:
           - Structures: usage/structures.md
           - Utilities: usage/utilites.md
           - Whitelisting: usage/whitelist.md
-          - WorldEdit App: usage/worldedit_app.md
+          - Bedrock World Editor: usage/worldedit_app.md
+          - Editor Mode: usage/editor_mode.md

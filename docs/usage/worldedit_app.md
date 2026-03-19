@@ -1,10 +1,10 @@
-# WorldEdit App
+# Bedrock World Editor
 
 !!! Important
 
-    The app is for Windows only! However an Android port is planned in the future. Whether one for iOS will be made is not made certain.
+    As of writing this page, the app is only available on PC.
 
-The WorldEdit app is a program that can be used in combination with the WorldEdit addon. It gives you more capabilities than what the game itself allows. As of writing, you can use the app for two things.
+Bedrock World Editor app is an NBT editor created by [8Crafter](https://github.com/8Crafter-Studios). Apart from NBT editing, it comes with WorldEdit support that lets you process worlds in ways you can't with just the addon.
 
 1. Exporting structures and using them in other worlds
 2. Changing biomes
@@ -17,21 +17,39 @@ The WorldEdit app is a program that can be used in combination with the WorldEdi
 
 ## Installation
 
-Not much needs to be done when installing it. It should come as a .zip file which you can extract and run anywhere on your system. Just make sure that all the files the executable came with stay in the same folder with each other.
+First you go the app's GitHub page [here](https://github.com/8Crafter-Studios/Bedrock-World-Editor). In this page you'll find a "Releases" section. There you will find all released versions of the app. Go for the latest version. Under it you'll see a list of "Assets". Download the one made for your device.
+
+- Windows: .exe
+- MacOS: .dmg
+- Linux: .deb / .rpm
+
+You may have to press "Show All Assets" to see the file you need. Once downloaded, installation will depend on your system. For Windows it's as simple as running the setup executable file and going through any needed steps to get it up and running.
 
 ## Usage
 
-Using the app is easy! After saving and exiting a world you did work in, go to `Worlds` and select your world. The app will check for anything to process, and if there is, will allow you to proceed. You can also back up the world in case anything goes wrong. After proceeding and waiting a while, it should say that the world has been processed. You are then free to open the world in-game.
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/TMjcjqkZjv4"
+  title="Bedrock World Editor tutorial 1"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen>
+</iframe>
 
-!!! Note
-
-    If you exported a structure for the first time, a behaviour pack containing all your exports will be created. You must apply this pack to any world you want to use exported structures in. This only needs to be done once per world, and any later exports will automatically be made available to those worlds.
-
-You're not just limited to worlds in Minecraft either. You can also open up an arbitrary folder and process that to. Any structures exported will be put into its own .mcpack file next to the world's folder.
-
-Also in `Settings`, there is an option to automatically process worlds. So if you regularly make changes to a world requiring the app, you just have to save and exit the world, and it will be, well, processed automatically! The app will let you know if it's done so.
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/Ltk4IiAjy8w"
+  title="Bedrock World Editor tutorial 2"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen>
+</iframe>
 
 ## Limitations
 
--   Changing biomes may not work properly in worlds with a modded height range.
--   Marketplace maps are encrypted, so they can't be modified.
+- Changing biomes may not work properly in worlds with a modded height range.
+- Marketplace maps are encrypted, so they can't be modified.

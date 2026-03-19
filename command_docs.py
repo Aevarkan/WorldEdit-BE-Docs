@@ -151,7 +151,7 @@ with open(commandspage, 'w') as file:
         
         if sub:
             name = f'{command["name"]} {sub["subName"]}'
-            desc = command['description'] + '.' + sub['subName']
+            desc = sub['description'] if 'description' in sub else command['description'] + '.' + sub['subName']
             perm = sub.get('permission', '')
             args = printUsage(command.get('usage', []), sub['subName'])
             aliases = ''

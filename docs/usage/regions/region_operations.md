@@ -74,14 +74,56 @@ The `;curve` command acts like the `;line` command. Except you can define as man
 
 ## Paths
 
-The `;path` command is similar to the `;curve` command, but instead of just placing blocks, it copies a structure along the curve! The space between each copy can also be adjusted. For example, `;path 10` pastes down a structure every 10 blocks along the curve.
+The `;path` command is similar to the `;curve` command, but instead of just placing blocks, it copies a structure along the curve. The space between each copy can also be adjusted. For example, `;path 10` pastes down a structure every 10 blocks along the curve. You can also make it so pasted structures are rotated along the curve. Eg: `;path 10 rotated 0` where `0` is a constant offset to the structure's rotation.
 
 ## Hollowing
 
 With the `;hollow` command you can hollow out what you have selected. You can specify the thickness of the wall that would be left from the operation, and even what blocks to replace the hollowed out area with. This is air by default.
 
+## Overlaying
+
+The `;overlay` command (`;overlay <pattern> [depth] [surfaceMask]`) places blocks on top of surfaces within your selection. It scans each column from the top of the selection downward and places the pattern starting at the first non-air, non-fluid block it finds. The optional `depth` argument (default `1`) controls how many blocks deep the overlay is applied. The optional `surfaceMask` restricts which blocks are treated as a surface — by default any solid, non-fluid block qualifies.
+
+!!! Examples
+
+    `;overlay grass_block`
+
+    Covers every exposed surface in the selection with grass.
+
+    `;overlay dirt 3`
+
+    Places dirt 3 blocks deep below every surface.
+
+    `;overlay snow_layer 1 grass_block`
+
+    Places snow only on top of grass blocks.
+
+## Terrain Generation
+
+The `;terrain` command (`;terrain <pattern> [amplitude] [frequency] [octaves] [-s <seed>] [-a]`) fills your selection with terrain shaped by fractal (Perlin) noise. The pattern is used to fill all blocks below each generated height value.
+
+- **amplitude** — controls the height range of the terrain relative to the selection height. Default is `1` (the full height of the selection). Lower values produce flatter terrain.
+- **frequency** — controls the horizontal scale of the noise. Higher values produce more frequent, smaller hills. Default is `1`.
+- **octaves** — the number of noise layers stacked together to add detail. More octaves make terrain rougher. Default is `1`.
+- **-s `<seed>`** — sets a fixed random seed so the result is reproducible.
+- **-a** (additive) — instead of filling from the bottom of the selection upward, the terrain is built on top of whatever is already there, starting from the topmost existing block in each column.
+
+!!! Examples
+
+    `;terrain stone`
+
+    Generates stone terrain filling the selection with default settings.
+
+    `;terrain grass_block 0.5 2 4`
+
+    Generates detailed, higher-frequency terrain at half the selection height.
+
+    `;terrain dirt 1 1 1 -a`
+
+    Layers terrain on top of existing blocks rather than overwriting from the base.
+
 ## Reading and Changing Biomes
 
 Two commands are available to read and set biomes respectively. `;biomeinfo` and `;setbiome`. With `;biomeinfo` you can get a list of biomes that the selection is covering. You can also do `;biomeinfo -p` to get the biome at your current position.
 
-As for setting biomes, that's done with `;setbiome <biome>` and you can change how parts of the world look and operate with it. Whether it be the colour of the grass, or whether rain or snow (or nothing) falls. Note that due to limitations, these changes **won't apply on their own**. To do that, you need to exit the world, and process it with the [WorldEdit app](../worldedit_app.md).
+As for setting biomes, that's done with `;setbiome <biome>` and you can change how parts of the world look and operate with it. Whether it be the colour of the grass, or whether rain or snow (or nothing) falls. Note that due to limitations, these changes **won't apply on their own**. To do that, you need to exit the world, and process it with an [external application](../worldedit_app.md).

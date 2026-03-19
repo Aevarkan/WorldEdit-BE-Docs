@@ -44,7 +44,8 @@ This generates a torus with varying inner radius and outer radius. Outer radius 
 ## Lofts
 
 ```txt
-;loft start
+;loft start_curve
+;loft add_point
 ;loft set <pattern>
 ;loft remove
 ;loft clear
@@ -52,9 +53,9 @@ This generates a torus with varying inner radius and outer radius. Outer radius 
 
 Lofts are a group of segments that form a shape. These can be used to make things like flags and ramps. Because of how complex they are, there are four subcommands to manage their creation.
 
-`;loft start` puts you into loft mode. You're usual ways of making selections (`;pos`, `;hpos` commands and selection wands) will be used to create the segments that make up the loft. While in loft mode, the first selection mark is used to create a new segment in the loft, with the marked position as its first point; the second selection mark grows the segment by adding more points to it.
+`;loft start_curve` creates a new starting point for a segment of your loft curve; using your current position. You grow the segment by using `;loft add_point`. A loft needs at least 2 segments to be usable.
 
-Once you have all your segments, use `;loft set <pattern>` to fill it in with your pattern of choice. For example, `;loft set wool`. If you want to remove points from your selection, use `;loft remove` To remove the last point added. And when you're ready to leave loft mode, use `;loft clear`.
+Once you have all your segments, use `;loft set <pattern>` to fill it in with your pattern of choice. For example, `;loft set wool`. If you want to remove points from your selection, use `;loft remove` To remove the last point added. And if you want to remove everything, use `;loft clear`.
 
 ## Custom Shapes
 
