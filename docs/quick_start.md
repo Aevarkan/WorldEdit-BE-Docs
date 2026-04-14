@@ -6,7 +6,7 @@ By default, players are not allowed to use WorldEdit. Only those tagged with "wo
 
 !!! Tip
 
-    You can also give other players worldedit permissions by changing `@s` to the player's name. You'll need to surround it in quotes if it has a space in it. Eg: `/tag "Steve Wanderer" add worldedit`
+    Do your edit, and then commit the change!
 
 ## Going places
 
